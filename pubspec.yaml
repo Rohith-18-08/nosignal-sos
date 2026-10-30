@@ -1,0 +1,25 @@
+name: nosignal_sos
+description: Offline SOS mesh network - emergency messages hop phone to phone without internet.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Phone-to-phone over Bluetooth + Wi-Fi Direct (no internet needed)
+  nearby_connections: ^4.0.0
+  # Asks the user for Bluetooth / location / nearby-devices permissions
+  permission_handler: ^11.3.1
+  # GPS location (works offline)
+  geolocator: ^13.0.0
+  # Uploads SOS messages to Firebase when a phone has internet
+  http: ^1.2.0
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
